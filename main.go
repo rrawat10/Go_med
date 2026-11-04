@@ -56,11 +56,11 @@ func check(line string) (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("score : %w", err)
 	}
-	if score < 0 || score > 150 {
+	if score < 0 || score > 100 {
 		return "", RangeError{
 			Field: "score",
 			Min:   0,
-			Max:   150,
+			Max:   100,
 			Got:   score,
 		}
 	}
